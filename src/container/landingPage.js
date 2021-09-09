@@ -4,7 +4,7 @@ import Categories from '../component/Category';
 import RecipeList from './Recipe';
 import { fetchIngredientsStartAsync } from '../actions/actionIngredient';
 
-const Home = () => {
+const LandingPage = () => {
   // eslint-disable-next-line no-unused-vars
   const [state, setState] = useState('Fish');
   const dispatch = useDispatch();
@@ -24,4 +24,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default LandingPage;
