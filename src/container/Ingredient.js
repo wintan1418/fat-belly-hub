@@ -4,7 +4,7 @@ import {
   Loader, Table, Header, Container, Segment, Image,
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import { fetchIngredientsStartAsync } from '../actions/getIngredients';
+import { fetchIngredientsStartAsync } from '../actions/actionIngredient';
 import '../App.css';
 
 const IngredientList = () => {
@@ -82,7 +82,7 @@ const IngredientList = () => {
             {e.strInstructions}
           </p>
           <Link to="/">
-            <button type="button" style={{ background: 'grey', color: white }}>
+            <button type="button" style={{ background: 'grey', color: 'white' }}>
               Click me and i would take you home
             </button>
           </Link>
