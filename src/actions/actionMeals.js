@@ -20,7 +20,7 @@ export const fetchMealsBeginAsync = meals => {
   return dispatch => {
     dispatch(fetchMealsBegin());
     axios
-      .get('https://www.themealdb.com/api/json/v1/1/categories.php')
+      .get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${meals}`)
       .then(res => dispatch(fetchMealsProgress(res.data.meals)))
       .catch(error => dispatch(fetchMealsTerminated(error)));
   };
