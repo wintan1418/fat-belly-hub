@@ -31,7 +31,7 @@ const IngredientList = () => {
   });
 
   const strMeasure = [];
-  Object.keys(keys).forEach(e => {
+  Object.keys(Keys).forEach(e => {
     if (e.includes('strMeasure')) {
       strMeasure.push(Keys[e]);
     }
@@ -47,16 +47,45 @@ const IngredientList = () => {
             {e.strCategory}
           </p>
           <h2>{ingredients.strMeal}</h2>
-          <Image src={ingredients.strMealThumb} size="medium" centered/>
-          <Container style={{margin: 30}}>
-            <Table basic="very" called style={{width: '70%', margin: 'auto'}}>
+          <Image src={ingredients.strMealThumb} size="medium" centered />
+          <Container style={{ margin: 30 }}>
+            <Table basic="very" called style={{ width: '70%', margin: 'auto' }}>
               <Table.Header>
                 <Table.Row>
-                  
+                  <Table.HeaderCell>Ingredients</Table.HeaderCell>
+                  <Table.HeaderCell>measurements</Table.HeaderCell>
                 </Table.Row>
-                </Table.Header> 
+              </Table.Header>
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell>
+                    {strIngredient.map(e => (
+                      <Header as="h3" Key={`${e}_${Math.random() * 100}`}>
+                        {e}
+                      </Header>
+                    ))}
+                  </Table.Cell>
+                  <Table.Cell style={{ paddingTOP: 30 }} />
+                  {strMeasure.map(m => (
+                    <Header as="h3" Key={`${m}_${Math.random * 100}`}>
+                      {m}
+                    </Header>
+                  ))}
+                </Table.Row>
+              </Table.Body>
             </Table>
           </Container>
+          <h2 style={{ color: 'lavenderblush' }}>
+            Ingredient Instruction
+          </h2>
+          <p style={{ fontSize: 15 }}>
+            {e.strInstructions}
+          </p>
+          <Link to="/">
+            <button type="button" style={{ background: 'grey', color: white }}>
+              Click me and i would take you home
+            </button>
+          </Link>
         </Segment>
 
       ))}
@@ -64,3 +93,5 @@ const IngredientList = () => {
 
   );
 };
+
+export default IngredientList;
