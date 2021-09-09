@@ -14,5 +14,20 @@ const IngredientList = () => {
   const { pathname } = window.location;
 
   const id = pathname.split('/ingredients/')[1];
+
+  useEffect(() => {
+    dispatch(fetchIngredientsStartAsync(id));
+  }, []);
+
+  if (!ingredients) {
+    return <Loader active inline="centered" />;
+  }
+  const Keys = Object.values(ingredients)[0];
+  const strIngredient = [];
+  Object.keys(Keys).forEach(e => {
+    if (e.includes('strIngredient')) {
+      strIngredient.push(Keys[e]);
+    }
+  });
   
 };
