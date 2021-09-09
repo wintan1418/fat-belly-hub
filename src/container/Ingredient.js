@@ -29,5 +29,11 @@ const IngredientList = () => {
       strIngredient.push(Keys[e]);
     }
   });
-  
+
+  const strMeasure = [];
+  Object.keys(keys).forEach(e => {
+    if (e.includes('strMeasure')) {
+      strMeasure.push(Keys[e]);
+    }
+  });
 };
