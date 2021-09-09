@@ -36,4 +36,20 @@ const IngredientList = () => {
       strMeasure.push(Keys[e]);
     }
   });
+
+  return (
+    <Container style={{ display: 'flex', paddingBottom: 50 }}>
+      {ingredients.map(e => (
+        <Segment Key={e.idMeal}>
+          <p>
+            Category:
+            { ''}
+            {e.strCategory}
+          </p>
+        </Segment>
+
+      ))}
+    </Container>
+
+  );
 };
