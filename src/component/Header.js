@@ -6,4 +6,9 @@ const Header = () => {
   const { pathname } = window.location;
 
   const path  = pathname === '/' ? 'home' : pathname.substr(1);
+
+  const [activeItem, setActiveItem] = useState(path);
+
+  const handleItemClick = (e, {name }) => setActiveItem(name);
+  
 }
