@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   Grid, Image, Card, Container,
 } from 'semantic-ui-react';
-import { fetchMealsStartAsync } from '../actions/actionMeals';
+import { fetchMealsBeginAsync } from '../actions/actionMeals';
 
 const RecipeList = props => {
   const { cat } = props;
@@ -13,7 +13,7 @@ const RecipeList = props => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMealsStartAsync(cat));
+    dispatch(fetchMealsBeginAsync(cat));
   }, [cat]);
 
   return (
@@ -24,9 +24,9 @@ const RecipeList = props => {
             <Grid.Column
               Key={meal.strMeal}
               style={{ marginTop: 20 }}
-              as={link}
+              as={Link}
               to={{
-                pathname: `/ingredients/${meal, idMeal}`,
+                pathname: `/ingredients/${meal.idMeal}`,
                 id: meal.idMeal,
               }}
             >
@@ -47,3 +47,12 @@ const RecipeList = props => {
 
   );
 };
+
+RecipeList.propTypes = {
+  cat: PropTypes.string,
+};
+
+RecipeList.defaultProps = {
+  cat: '',
+};
+export default RecipeList;

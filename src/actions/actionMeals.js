@@ -2,16 +2,16 @@ import axios from 'axios';
 import { MealsActionTypes } from './actionType';
 
 export const fetchMealsBegin = () => ({
-  type: MealsActionTypes.FETCH_MEAL_BEGIN,
+  type: MealsActionTypes.FETCH_MEALS_BEGIN,
 });
 
-export const fetchMealsProgress = categories => ({
-  type: MealsActionTypes.FETCH_MEAL_PROGRESS,
-  categories,
+export const fetchMealsProgress = meals => ({
+  type: MealsActionTypes.FETCH_MEALS_PROGRESS,
+  meals,
 });
 
 export const fetchMealsTerminated = error => ({
-  type: MealsActionTypes.FETCH_MEAL_TERMINTAED,
+  type: MealsActionTypes.FETCH_MEALS_TERMINTAED,
   error,
 });
 
