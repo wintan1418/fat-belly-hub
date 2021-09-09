@@ -16,17 +16,34 @@ const RecipeList = props => {
     dispatch(fetchMealsStartAsync(cat));
   }, [cat]);
 
-return (
-  container textalign="center" style={{marginTop: 40}}>
-  <Grid columns={3}>
-    <Grid.Row>
-      {meals && meals.map(meal => (
-        <Grid.column
-      )
+  return (
+    <Container textalign="center" style={{ marginTop: 40 }}>
+      <Grid columns={3}>
+        <Grid.Row>
+          {meals && meals.map(meal => (
+            <Grid.Column
+              Key={meal.strMeal}
+              style={{ marginTop: 20 }}
+              as={link}
+              to={{
+                pathname: `/ingredients/${meal, idMeal}`,
+                id: meal.idMeal,
+              }}
+            >
+              <Card>
+                <Image src={meal.strMealThumb} />
+                <Card.Content>
+                  <Card.Description>
+                    {meal.strMeal}
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+            </Grid.Column>
 
-      )}
-    </Grid.Row>
-  </Grid>
-)
+          ))}
+        </Grid.Row>
+      </Grid>
+    </Container>
 
+  );
 };

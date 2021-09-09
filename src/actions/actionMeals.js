@@ -1,27 +1,27 @@
 import axios from 'axios';
-import { CategoriesActionTypes } from './actionType';
+import { MealsActionTypes } from './actionType';
 
-export const fetchCategoriesStart = () => ({
-  type: CategoriesActionTypes.FETCH_DATA_BEGIN,
+export const fetchMealsBegin = () => ({
+  type: MealsActionTypes.FETCH_MEAL_BEGIN,
 });
 
-export const fetchCategoriesSuccess = categories => ({
-  type: CategoriesActionTypes.FETCH_DATA_PROGRESS,
+export const fetchMealsProgress = categories => ({
+  type: MealsActionTypes.FETCH_MEAL_PROGRESS,
   categories,
 });
 
-export const fetchCategoriesFailure = error => ({
-  type: CategoriesActionTypes.FETCH_DATA_TERMINTAED,
+export const fetchMealsTerminated = error => ({
+  type: MealsActionTypes.FETCH_MEAL_TERMINTAED,
   error,
 });
 
 // eslint-disable-next-line arrow-body-style
-export const fetchCategoriesStartAsync = () => {
+export const fetchMealsBeginAsync = meals => {
   return dispatch => {
-    dispatch(fetchCategoriesStart());
+    dispatch(fetchMealsBegin());
     axios
       .get('https://www.themealdb.com/api/json/v1/1/categories.php')
-      .then(res => dispatch(fetchCategoriesSuccess(res.data.categories)))
-      .catch(error => dispatch(fetchCategoriesFailure(error)));
+      .then(res => dispatch(fetchMealsProgress(res.data.meals)))
+      .catch(error => dispatch(fetchMealsTerminated(error)));
   };
 };
