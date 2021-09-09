@@ -1,4 +1,4 @@
-import React, { usestate } from 'react';
+import React, { useState } from 'react';
 import { Menu } from 'semantic-ui-react';
 import { link } from 'react-router-dom';
 
@@ -23,3 +23,4 @@ const Header = () => {
     </Menu>
   );
 };
+export default Header;
