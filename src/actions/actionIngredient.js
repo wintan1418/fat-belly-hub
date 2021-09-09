@@ -14,3 +14,14 @@ export const fetchIngredientsTerminated = error => ({
   type: IngredientsActionTypes.FETCH_INGREDIENTS_TERMINATED,
   error,
 });
+
+// eslint-disable-next-line arrow-body-style
+export const fetchIngredientsStartAsync = id => {
+  return dispatch => {
+    dispatch(fetchIngredientsBegin());
+    axios
+      .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+      .then(res => dispatch(fetchIngredientsProgress(res.data.meals)))
+      .catch(error => dispatch(fetchIngredientsTerminated(error)));
+  };
+};
