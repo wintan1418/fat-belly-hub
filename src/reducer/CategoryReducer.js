@@ -1,5 +1,4 @@
 import { CategoriesActionTypes } from '../actions/actionType';
-import Categories from '../component/Category';
 
 const INITIAL_STATE = {
   categories: [],
@@ -14,11 +13,23 @@ const categoriesReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isFetching: true,
       };
-  
-  case CategoriesActionTypes.FETCH_DATA_PROGRESS:
-    return{
-      ...state,
-      categories action.categories,
-      isFetching: false,
-    };
+
+    case CategoriesActionTypes.FETCH_DATA_PROGRESS:
+      return {
+        ...state,
+        categories: action.categories,
+        isFetching: false,
+      };
+    case CategoriesActionTypes.FETCH_DATA_TERMINATED:
+      return {
+        ...state,
+        errorMessage: action.error,
+        isFetching: false,
+
+      };
+    default:
+      return state;
+  }
 };
+
+export default categoriesReducer;
