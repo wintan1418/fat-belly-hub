@@ -19,3 +19,23 @@ exports[`Creates a component renders correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`Creates a component returns correctly 1`] = `
+<div
+  className="ui container"
+  style={
+    Object {
+      "marginTop": 40,
+    }
+  }
+  textalign="center"
+>
+  <div
+    className="ui three column grid"
+  >
+    <div
+      className="row"
+    />
+  </div>
+</div>
+`;
