@@ -1,9 +1,9 @@
-import { IngredientsActionTypes } from "../actions/actionType";
+import { IngredientsActionTypes } from '../actions/actionType';
 
 const INITIAL_STATE = {
-ingredients: [],
-isFetching: false,
-errorMessage: undefined,
+  ingredients: [],
+  isFetching: false,
+  errorMessage: undefined,
 };
 
 const ingredientsReducer = (state = INITIAL_STATE, action) => {
@@ -13,6 +13,21 @@ const ingredientsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isFetching: true,
       };
-      case
+    case IngredientsActionTypes.FETCH_INGREDIENTS_PROGRESS:
+      return {
+        ...state,
+        ingredients: action.ingredients,
+        isFetching: false,
+      };
+    case IngredientsActionTypes.FETCH_INGREDIENTS_TERMINATED:
+      return {
+        ...state,
+        errorMessage: action.error,
+        isFetching: false,
+      };
+    default:
+      return state;
   }
-}
+};
+
+export default ingredientsReducer;
