@@ -4,14 +4,14 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import reducers from './reducer';
+import reducer from './reducer';
 import 'semantic-ui-css/semantic.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk, logger)));
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk, logger)));
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

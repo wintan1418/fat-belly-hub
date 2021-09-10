@@ -12,9 +12,9 @@ const Header = () => {
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (
-    <Menu pointing secondary size="massive" color="orange" textalign="center">
+    <Menu pointing secondary size="massive" color="purple" textalign="center">
       <Menu.Item
-        name="Fat-Belly-Hub Api"
+        name="Fat-Belly-Hub "
         active={activeItem === 'home'}
         onClick={handleItemClick}
         as={Link}

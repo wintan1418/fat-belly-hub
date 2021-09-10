@@ -6,6 +6,7 @@ import {
   Grid, Image, Card, Container,
 } from 'semantic-ui-react';
 import { fetchMealsBeginAsync } from '../actions/actionMeals';
+import './Recipe.css';
 
 const RecipeList = props => {
   const { cat } = props;
@@ -23,17 +24,17 @@ const RecipeList = props => {
           {meals && meals.map(meal => (
             <Grid.Column
               Key={meal.strMeal}
-              style={{ marginTop: 20 }}
+              style={{ marginTop: '20' }}
               as={Link}
               to={{
                 pathname: `/ingredients/${meal.idMeal}`,
                 id: meal.idMeal,
               }}
             >
-              <Card>
+              <Card className="cad">
                 <Image src={meal.strMealThumb} />
-                <Card.Content>
-                  <Card.Description>
+                <Card.Content className="con">
+                  <Card.Description style={{ color: 'purple' }}>
                     {meal.strMeal}
                   </Card.Description>
                 </Card.Content>

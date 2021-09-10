@@ -11,7 +11,7 @@ export const fetchMealsProgress = meals => ({
 });
 
 export const fetchMealsTerminated = error => ({
-  type: MealsActionTypes.FETCH_MEALS_TERMINTAED,
+  type: MealsActionTypes.FETCH_MEALS_TERMINATED,
   error,
 });
 

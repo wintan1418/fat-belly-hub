@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCategoriesStartAsync } from '../actions/actionCategories';
+import './Category.css';
 
 const Categories = props => {
   const categories = useSelector(state => state.categories.categories);
@@ -16,7 +17,7 @@ const Categories = props => {
   };
 
   return (
-    <div>
+    <div className="categ">
       <h3>Select a Category </h3>
       <select className="cat" placeholder="Select your category" onChange={handleChange}>
         {categories && categories.map(c => (

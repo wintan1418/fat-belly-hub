@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creates a component returns correctly 1`] = `
+<div
+  className="categ"
+>
+  <h3>
+    Select a Category 
+  </h3>
+  <select
+    className="cat"
+    onChange={[Function]}
+    placeholder="Select your category"
+  />
+</div>
+`;

@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 import Categories from '../component/Category';
 import RecipeList from './Recipe';
 import { fetchIngredientsStartAsync } from '../actions/actionIngredient';
+import '../App.css';
 
 const LandingPage = () => {
-  // eslint-disable-next-line no-unused-vars
   const [state, setState] = useState('Fish');
   const dispatch = useDispatch();
 
@@ -20,7 +20,7 @@ const LandingPage = () => {
   return (
     <div>
       <Categories onCategoryChange={handleCategoryChange} />
-      <RecipeList handleChange={handleCategoryChange} />
+      <RecipeList handleChange={handleCategoryChange} cat={state} />
     </div>
   );
 };

@@ -22,18 +22,18 @@ const IngredientList = () => {
   if (!ingredients) {
     return <Loader active inline="centered" />;
   }
-  const Keys = Object.values(ingredients)[0];
+  const keys = Object.values(ingredients)[0];
   const strIngredient = [];
-  Object.keys(Keys).forEach(e => {
+  Object.keys(keys).forEach(e => {
     if (e.includes('strIngredient')) {
-      strIngredient.push(Keys[e]);
+      strIngredient.push(keys[e]);
     }
   });
 
   const strMeasure = [];
-  Object.keys(Keys).forEach(e => {
+  Object.keys(keys).forEach(e => {
     if (e.includes('strMeasure')) {
-      strMeasure.push(Keys[e]);
+      strMeasure.push(keys[e]);
     }
   });
 
