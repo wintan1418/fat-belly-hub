@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu } from 'semantic-ui-react';
-import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const { pathname } = window.location;
@@ -17,7 +17,7 @@ const Header = () => {
         name="Fat-Belly-Hub Api"
         active={activeItem === 'home'}
         onClick={handleItemClick}
-        as={link}
+        as={Link}
         to="/"
       />
     </Menu>
