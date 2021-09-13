@@ -10,15 +10,15 @@ This is a simple web app built with redux,it returns meals,and their recipe ingr
 
 # Screenshot of the Project
 
-![first view](screentake1.png)
-![second view](screentake2.png)
+![first view](screentin1.png)
+![second view](screentin2.png)
 
 
 # Loom Video link
 
 
-- [Loom video 1.](https://www.loom.com/share/9fc248d8f4544715a15821cff103becd)
-- [Loom video 2.](https://www.loom.com/share/9574551f1a714beda38698f52ccf52c0)
+- [Loom video redo.](https://www.loom.com/share/c28e46153765468eafa398cd28820101)
+
 
 
 
