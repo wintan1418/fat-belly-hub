@@ -36,7 +36,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Netlify for deploy.
 
 
-# How it's work.
+# How to get it on your work-station.
 
 - Go to [fat-belly-hub](https://github.com/wintan1418/fat-belly-hub/tree/fatbelly).
 
