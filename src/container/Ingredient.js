@@ -47,7 +47,7 @@ const IngredientList = () => {
             {e.strCategory}
           </p>
           <h2>{ingredients.strMeal}</h2>
-          <Image src={ingredients.strMealThumb} size="medium" centered />
+          <Image src={e.strMealThumb} size="medium" centered />
           <Container style={{ margin: 30 }}>
             <Table basic="very" called style={{ width: '70%', margin: 'auto' }}>
               <Table.Header>

@@ -5,7 +5,7 @@ exports[`Creates a component returns correctly 1`] = `
   className="categ"
 >
   <h3>
-    Select a Category 
+    Explore! 
   </h3>
   <select
     className="cat"

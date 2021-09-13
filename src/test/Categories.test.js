@@ -26,7 +26,7 @@ describe('Creates a component', () => {
   it('Renders a component', () => {
     store = mockStore(initialState);
     render(<Provider store={store}><Categories /></Provider>);
-    const element = screen.getByText('Select a Category');
+    const element = screen.getByText('Explore!');
     expect(element).toBeInTheDocument();
   });
 });
