@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCategoriesStartAsync } from '../actions/actionCategories';
-import './Category.css';
+import '../component/Category.css';
 
 const Categories = props => {
   const categories = useSelector(state => state.categories.categories);

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Categories from '../component/Category';
+import Categories from './Category';
 import RecipeList from './Recipe';
 import { fetchIngredientsStartAsync } from '../actions/actionIngredient';
 import '../App.css';
 
 const LandingPage = () => {
-  const [state, setState] = useState('Fish');
+  const [state, setState] = useState('beef');
   const dispatch = useDispatch();
 
   const handleCategoryChange = category => {
