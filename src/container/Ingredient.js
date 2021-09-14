@@ -40,7 +40,7 @@ const IngredientList = () => {
   return (
     <Container style={{ display: 'flex', paddingBottom: 50 }}>
       {ingredients.map(e => (
-        <Segment Key={e.idMeal}>
+        <Segment key={e.idMeal}>
           <p>
             Category:
             { ''}
@@ -60,14 +60,14 @@ const IngredientList = () => {
                 <Table.Row>
                   <Table.Cell>
                     {strIngredient.map(e => (
-                      <Header as="h3" Key={`${e}_${Math.random() * 100}`}>
+                      <Header as="h3" key={`${e}_${Math.random() * 100}`}>
                         {e}
                       </Header>
                     ))}
                   </Table.Cell>
                   <Table.Cell style={{ paddingTOP: 30 }} />
                   {strMeasure.map(m => (
-                    <Header as="h3" Key={`${m}_${Math.random * 100}`}>
+                    <Header as="h3" key={`${m}_${Math.random * 100}`}>
                       {m}
                     </Header>
                   ))}

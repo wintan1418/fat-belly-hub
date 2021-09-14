@@ -23,7 +23,7 @@ const RecipeList = props => {
         <Grid.Row>
           {meals && meals.map(meal => (
             <Grid.Column
-              Key={meal.strMeal}
+              key={meal.strMeal}
               style={{ marginTop: '20' }}
               as={Link}
               to={{
