@@ -8,8 +8,8 @@ This prooject is a simple web app built with redux,it returns meals,and their re
 
 # Screenshot of the Project
 
-![first view](screentin1.png)
-![second view](screentin2.png)
+![first view](screentin.png)
+![second view](screentin 2.png)
 
 
 # Loom Video link
