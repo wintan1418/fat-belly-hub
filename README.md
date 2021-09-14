@@ -1,7 +1,5 @@
 # fat belly-hub.
-This is a simple web app built with redux,it returns meals,and their recipe ingredient based on what you are searching for within the categories available.
-
-
+This prooject is a simple web app built with redux,it returns meals,and their recipe ingredient based on what you are searching for within the categories available.
 
 
 # Live demo link
@@ -18,10 +16,6 @@ This is a simple web app built with redux,it returns meals,and their recipe ingr
 
 
 - [Loom video redo.](https://www.loom.com/share/c28e46153765468eafa398cd28820101)
-
-
-
-
 
 # Getting Started with Create React App
 
